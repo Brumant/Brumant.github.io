@@ -9,6 +9,7 @@ let clickCount = 0;  // 记录点击 No 的次数
 const noTexts = [
     "？你认真的吗…", 
     "要不再想想？", 
+     "再考虑考虑嘛QAQ", 
     "不许选这个！ ", 
     "我会很伤心…", 
     "不行:("
@@ -32,7 +33,7 @@ noButton.addEventListener("click", function() {
     questionText.style.transform = `translateY(-${moveUp}px)`;
 
     // No 文案变化（前 5 次变化）
-    if (clickCount <= 5) {
+    if (clickCount <= 6) {
         noButton.innerText = noTexts[clickCount - 1];
     }
 
@@ -49,7 +50,7 @@ noButton.addEventListener("click", function() {
 yesButton.addEventListener("click", function() {
     document.body.innerHTML = `
         <div class="yes-screen">
-            <h1 class="yes-text">!!!喜欢你!! ( >᎑<)♡︎ᐝ</h1>
+            <h1 class="yes-text">!!!好耶!!谢谢你!!! ( >᎑<)♡︎ᐝ</h1>
             <img src="images/hug.png" alt="拥抱" class="yes-image">
         </div>
     `;
